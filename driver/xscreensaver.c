@@ -1791,6 +1791,7 @@ clientmessage_response (saver_info *si, Window w, Bool error,
 			const char *stderr_msg,
 			const char *protocol_msg)
 {
+	printf("%s\n", __FUNCTION__);
   char *proto;
   int L;
   saver_preferences *p = &si->prefs;

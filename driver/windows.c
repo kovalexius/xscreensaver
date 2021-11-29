@@ -958,6 +958,7 @@ window_exists_p (Display *dpy, Window window)
 static void
 store_saver_id (saver_screen_info *ssi)
 {
+	printf("%s\n", __FUNCTION__);
   XClassHint class_hints;
   saver_info *si = ssi->global;
   unsigned long pid = (unsigned long) getpid ();
@@ -1390,6 +1391,7 @@ initialize_screensaver_window_1 (saver_screen_info *ssi)
 void
 initialize_screensaver_window (saver_info *si)
 {
+  printf("%s\n", __FUNCTION__);
   int i;
   for (i = 0; i < si->nscreens; i++)
     initialize_screensaver_window_1 (&si->screens[i]);
